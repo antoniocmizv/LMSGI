@@ -12,6 +12,6 @@
 
 ![Esta es una imagen de ejemplo](
 
-[Nombre][Apellidos]
-[-------][-------]
-[Antonio][Castillo]
+|Nombre||Apellidos|
+|-------|-------|
+|Antonio|Castillo|
