@@ -10,4 +10,4 @@
         - Elemento de lista 6
      
 
-[ ] A
+ []  A
