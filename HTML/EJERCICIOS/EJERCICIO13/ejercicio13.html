@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formulario TeleBurger</h1>
+    <fieldset>
+        <h2>Introduzca sus datos</h2>
+        <form>
+
+            <label for="fname">Nombre:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Apellidos:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <label for="direccion">Dirección:</label><br>
+            <input type="text" id="direccion" name="direccion" value="C/"><br><br>
+            <label for="Localidad">Localidad:</label><br>
+            <input type="text" id="Localidad" name="Localidad" value="GRANADA"><br><br>
+            <label for="CP">CP:</label><br>
+            <input type="number" id="CP" name="CP" value="CP"><br><br>
+            <label for="Número">Número:</label><br>
+            <input type="number" id="Número" name="Número" value="6666666666"><br><br>
+
+
+        </form>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <h2>¿Cómo desea recoger el pedido?</h2>
+        <form>
+            <input type="radio" id="Local" name="recogida" value="Local">
+            <label for="Local">Local</label><br>
+            <input type="radio" id="Domicilio" name="recogida" value="Domicilio">
+            <label for="Domicilio">Domicilio</label><br>
+              
+        </form>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <h2>¿Qué ingredientes quiere junto con su hamburguesa?</h2>
+        <form>
+            <input type="checkbox" id="ingrediente1" name="ingrediente1" value="Queso">
+            <label for="ingrediente1"> Queso</label><br>
+            <input type="checkbox" id="ingrediente2" name="ingrediente2" value="Bacon">
+            <label for="ingrediente2"> Bacon</label><br>
+            <input type="checkbox" id="ingrediente3" name="ingrediente3" value="Lechuga">
+            <label for="ingrediente3"> Lechuga</label><br>
+            <input type="checkbox" id="ingrediente4" name="ingrediente4" value="Huevo">
+            <label for="ingrediente4"> Huevo</label><br>
+
+        </form>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <h2>Personalice su menú</h2>
+        <form >
+            <label for="size">Elige un tamaño:</label>
+            <select name="size" id="size">
+                <option value="small">pequeño</option>
+                <option value="medium">Mediano</option>
+                <option value="large">Grande</option>
+            </select><br><br>
+
+            <label for="bebida">Elige una bebida:</label>
+            <select id="bebida" name="bebida" size="2">
+              <option value="coca">Coca-Cola</option>
+              <option value="fanta">Fanta Naranja</option>
+              <option value="nestea">Nestea</option>
+              <option value="zumo">Zumo de frutas</option>
+            </select><br>
+            <p><label for="anotaciones">Añada alguna anotación a tener en cuenta</label></p>
+            <textarea id="anotaciones" name="anotaciones" rows="4" cols="50"> Introduce alguna anotación</textarea>
+        </form>
+    </fieldset>
+    <input type="submit">
+</body>
+
+</html>
