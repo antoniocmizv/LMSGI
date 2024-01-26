@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+
+            font-family: Verdana, serif;
+        }
+
+        header {
+            padding: 30px;
+
+            background: #333334;
+            color: #ffffff;
+
+            font-size: 3em;
+            font-weight: bold;
+
+        }
+
+        nav {
+            display: flex;
+            background: #CCC;
+            flex-wrap: wrap;
+            font-size: 30px;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #555;
+            text-decoration: none;
+            padding: 15px;
+
+        }
+
+        nav img {
+            
+            width: 50px;
+            height: 50px;
+            justify-content: flex-end;
+        }
+
+        nav a:hover {
+            background: #555;
+            color: #4cd3af;
+        }
+
+        section {
+            display: flex;
+        }
+
+        article {
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        #articulo-1 {
+            background-color: #7ebdbb;
+
+        }
+
+        #articulo-2 {
+            background-color: #b6ebb3;
+        }
+
+        #articulo-3 {
+            background-color: #bacee3;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+
+        }
+        .container{
+            max-width: 1170px;
+            margin:auto;
+            padding: 0 30px;
+        }
+        .container{
+            overflow: hidden;
+        }
+        .footer-section-about{
+            float: left;
+            width: 25%;
+            padding: 20px 0;
+        }
+        .footer-section-contact{
+            float: left;
+            width: 25%;
+            padding: 20px 0;
+        }
+        .footer-section-social{
+            float: left;
+            width: 25%;
+            padding: 20px 0;
+        }
+        .footer-bottom{
+            background: #333;
+            padding: 10px 0;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+        <img src="imagenes/avion.png" alt="">
+    </nav>
+
+    <section>
+        <article id="articulo-1">
+            <img src="imagenes/viaje1.jpg" alt="">
+            <h1>Un paseo por el viejo Oporto</h1>
+            <p>
+                Dignissim placerat vel aenean porta, magna ac scelerisque facilisis,
+                rhoncus est! Urna pulvinar dolor lorem purus dapibus quis vut! Hac nunc
+                vel ridiculus enim magnis mid phasellus! Duis et pellentesque lacus urna
+                diam? Sed phasellus, pellentesque mauris ac phasellus lacus augue enim!
+                Penatibus, porta, sit dis et adipiscing eu, nisi ac.
+            </p>
+        </article>
+        <article id="articulo-2">
+            <img src="imagenes/viaje2.jpg" alt="">
+            <p>
+                Dignissim placerat vel aenean porta, magna ac scelerisque facilisis,
+                rhoncus est! Urna pulvinar dolor lorem purus dapibus quis vut! Hac nunc
+                vel ridiculus enim magnis mid phasellus! Duis et pellentesque lacus urna
+                diam? Sed phasellus, pellentesque mauris ac phasellus lacus augue enim!
+                Penatibus, porta, sit dis et adipiscing eu, nisi ac.
+            </p>
+        </article>
+        <article id="articulo-3">
+            <img src="imagenes/viaje3.jpg" alt="">
+            <p>
+                Dignissim placerat vel aenean porta, magna ac scelerisque facilisis,
+                rhoncus est! Urna pulvinar dolor lorem purus dapibus quis vut! Hac nunc
+                vel ridiculus enim magnis mid phasellus! Duis et pellentesque lacus urna
+                diam? Sed phasellus, pellentesque mauris ac phasellus lacus augue enim!
+                Penatibus, porta, sit dis et adipiscing eu, nisi ac.
+        </article>
+    </section>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section-about">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos una agencia de viajes especializada en ofrecer experiencias únicas y memorables en destinos de todo el mundo.</p>
+            </div>
+            <div class="footer-section-contact">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fa fa-phone"></i> +1 123 456 7890</li>
+                    <li><i class="fa fa-envelope"></i> info@ejemploviajes.com</li>
+                    <li><i class="fa fa-map-marker"></i> Dirección de la agencia, Ciudad, País</li>
+                </ul>
+            </div>
+            <div class="footer-section-social">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Todos los derechos reservados &copy; 2022 | Ejemplo Viajes</p>
+    </div>
+</footer>
+</body>
+
+</html>
