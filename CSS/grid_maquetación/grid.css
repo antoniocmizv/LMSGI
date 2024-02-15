@@ -25,17 +25,13 @@ body {
 .grid-container{
   display: grid;
   gap: 10px;
-  grid-template-areas:
-  'header'
-  'navbar'
-  'sidebar'
-  'main'
-  'footer';
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 200px 200px 200px 100px;
-  height: 100vh;
-  width: 100%;
-  
+  grid-template:
+  'header  header header header ' 100px
+  'navbar navbar main main ' 
+  'navbar navbar sidebar sidebar ' 1fr
+  'footer  footer footer footer' 100px 
+  ;
+ 
 }
 .header {
   grid-area: header;
@@ -63,3 +59,22 @@ body {
 }
 
 
+
+@media(min-width: 600px){
+  .grid-container{
+    grid-template:
+    'header header' 100px
+    'navbar navbar' 50px
+    'main sidebar' 1fr
+    'footer footer' 100px 
+  }
+}
+@media(min-width: 900px){
+  .grid-container{
+    grid-template:
+    'header header header' 100px
+    'navbar main sidebar' 1fr
+    'footer footer footer' 100px / 200px 1fr 200px;
+  }
+  
+}
