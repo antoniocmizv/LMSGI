@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mensaje xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:noNamespaceSchemaLocation="ejemplo.xsd">
-    <remitente>Carlos</remitente>
-    <destinatario>María</destinatario>
-    <cuerpo>Hola María, ¿cómo estás?</cuerpo>
-</mensaje>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="ejemplo.xsd">
+    <libro isbn="1o">
+        <titulo>El Quijote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <editorial>Castalia</editorial>
+        <año>1605</año>
+        <precio>25.00</precio>
+        <tapa>blanda</tapa>
+        
+    </libro>
+    <libro isbn="2o">
+        <titulo>Otro libro</titulo>
+        <autor>Nombre del autor</autor>
+        <editorial>Nombre de la editorial</editorial>
+        <año>Año de publicación</año>
+        <precio>20.55</precio>
+        <tapa>dura</tapa>
+    </libro>
+    
+
+</biblioteca>
