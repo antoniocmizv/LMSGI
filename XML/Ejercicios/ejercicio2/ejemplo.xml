@@ -10,7 +10,7 @@ xsi:noNamespaceSchemaLocation="ejemplo.xsd">
         <tapa>blanda</tapa>
         
     </libro>
-    <libro isbn="2o">
+    <libro isbn="12345678910">
         <titulo>Otro libro</titulo>
         <autor>Nombre del autor</autor>
         <editorial>Nombre de la editorial</editorial>

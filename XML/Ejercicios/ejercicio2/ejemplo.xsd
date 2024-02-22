@@ -14,7 +14,7 @@
 							<xs:element name="precio" type="Tipo_precio" />
 							<xs:element name="tapa" type="Tipo_tapa" />
 						</xs:sequence>
-						<xs:attribute name="isbn" type="xs:string" />
+						<xs:attribute name="isbn" type="Tipo_Isbn" />
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
@@ -35,9 +35,28 @@
 	</xs:simpleType>
 	<xs:simpleType name="Tipo_editorial">
 		<xs:restriction base="xs:string">
-			<xs:minLength value="5"></xs:minLength>
-			<xs:maxLength value="100"></xs:maxLength>
+			<xs:minLength value="5" />
+			<xs:maxLength value="100" />
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:simpleType name="Tipo_Isbn">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{13}" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Tipo_tapa2">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="dura|blanda" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="tipo_editorial2">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="codigo" type="xs:positiveInteger" />
+			</xs:extension>
+		</xs:simpleContent>
+
+	</xs:complexType>
 
 </xs:schema>

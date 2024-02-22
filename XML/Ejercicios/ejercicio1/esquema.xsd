@@ -1,0 +1,44 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CatalogoPeliculas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Pelicula" maxOccurs="unbounded"> 
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Titulo" type="xs:string" />
+              <xs:element name="Duracion" type="xs:integer" />
+              <xs:element name="Genero">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Drama" />
+                    <xs:enumeration value="comedia" />
+                    <xs:enumeration value="terror" />
+                    <xs:enumeration value="Thriller"/>
+                    <xs:enumeration value="Sci-Fi and Fantasy" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Actores" maxOccurs="3">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Actor" type="xs:string" maxOccurs="3" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Fecha" type="xs:integer" />
+              <xs:element name="Director" type="xs:string" />
+              <xs:element name="Formato">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="DVD" />
+                    <xs:enumeration value="VHS" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
