@@ -10,7 +10,6 @@
             margin: 0px;
             padding: 0px;
             font-family: Verdana, serif;
-            box-sizing: border-box;
         }
 
         header {
@@ -38,52 +37,36 @@
             color: #4cd3af;
         }
 
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            margin: 20px;
+        }
+
         .card {
             background-color: #f2f2f2;
             padding: 20px;
-            margin: 20px;
             border-radius: 10px;
-
-        }
-
-        .contenedor {
-            display: flex;
-            justify-content: center;
         }
 
         @media (max-width: 700px) {
-            .contenedor {
-                flex-direction: column;
-                justify-content: center;
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            /* Define tres columnas de tamaño automático */
-            gap: 10px;
-            /* Define el espacio entre los elementos de la grilla */
-        }
-
-        .grid-item {
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <header>Flexbox -Alineado a la izquierda</header>
+    <header>Flexbox - Alineado a la izquierda</header>
     <nav>
         <a href="#">Inicio</a>
         <a href="#">Nosotros</a>
         <a href="#">Servicios</a>
         <a href="#">Contacto</a>
     </nav>
-    <div class="contenedor">
+    <div class="gallery">
         <div class="card">
             <h2>Card 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -98,22 +81,6 @@
             <h2>Card 3</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
-    </div>
-
-    <div class="grid-container">
-        <div class="grid-item">2</div>
-        <div class="grid-item">1</div>
-        
-        <div class="grid-item">3</div>
-        <div class="grid-item">4</div>
-        <div class="grid-item">5</div>
-        <div class="grid-item">6</div>
-        <div class="grid-item">7</div>
-        <div class="grid-item">8</div>
-        <div class="grid-item">9</div>
-        <div class="grid-item">10</div>
-        <div class="grid-item">11</div>
-        <div class="grid-item">12</div>
     </div>
 
 </body>
