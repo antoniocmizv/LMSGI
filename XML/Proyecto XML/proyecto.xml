@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum>
+    <datos_personales>
+        <nombre></nombre>
+        <apellidos></apellidos>
+        <fecha_nacimiento></fecha_nacimiento>
+        <lugar_nacimiento></lugar_nacimiento>
+        <nacionalidades>
+            <nacionalidad></nacionalidad>
+        </nacionalidades>
+        <identificacion></identificacion>
+        <foto></foto>
+    </datos_personales>
+    <datos_contacto>
+        <tipo_via></tipo_via>
+        <nombre_via></nombre_via>
+        <numero></numero>
+        <portal></portal>
+        <escalera></escalera>
+        <piso></piso>
+        <puerta></puerta>
+        <codigo_postal></codigo_postal>
+        <pais></pais>
+        <email></email>
+        <telefono_movil></telefono_movil>
+        <telefono_fijo></telefono_fijo>
+    </datos_contacto>
+    <datos_contacto_adicionales>
+        <pagina_web></pagina_web>
+        <redes_sociales>
+            <red_social></red_social>
+        </redes_sociales>
+    </datos_contacto_adicionales>
+    <formacion_academica>
+        <estudio>
+            <nombre></nombre>
+            <lugar></lugar>
+            <fecha_inicio></fecha_inicio>
+            <fecha_fin></fecha_fin>
+        </estudio>
+    </formacion_academica>
+   
+</curriculum>
