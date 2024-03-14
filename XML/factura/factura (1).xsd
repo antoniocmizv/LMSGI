@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="factura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="emision" type="xs:string" />
+        <xs:element name="vendedor" type="T_vendedor" />
+        <xs:element name="cliente" type="T_cliente" />
+        <xs:element name="articulo" maxOccurs="unbounded" type="T_articulo"/>
+        <xs:element name="descuento" type="xs:string" />
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:integer" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="T_vendedor">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="T_cliente">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string" />
+      <xs:element name="direccion" type="T_direccion"/>
+      <xs:element name="telefono" maxOccurs="2">
+        <xs:complexType>
+          <xs:attribute name="num" type="xs:integer" use="required" />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="T_direccion">
+          <xs:sequence>
+            <xs:element name="via" type="xs:string" />
+            <xs:element name="cp" type="xs:string" />
+            <xs:element name="localidad" type="xs:string" />
+            <xs:element name="provincia" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+
+  <xs:complexType name = "T_articulo">
+            <xs:sequence>
+              <xs:element name="denominacion" type="xs:string" />
+              <xs:element name="precio" type="xs:string" />
+              <xs:element name="cantidad" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:integer" use="required" />
+            <xs:attribute name="iva" type="xs:integer" use="required" />
+          </xs:complexType>
+</xs:schema>
