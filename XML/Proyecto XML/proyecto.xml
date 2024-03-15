@@ -39,5 +39,35 @@
             <fecha_fin></fecha_fin>
         </estudio>
     </formacion_academica>
-   
+    <idiomas>
+        <idioma>
+            <nombre></nombre>
+            <expresion_oral></expresion_oral>
+            <comprension_oral></comprension_oral>
+            <expresion_escrita></expresion_escrita>
+            <comprension_escrita></comprension_escrita>
+            <titulo_acreditativo></titulo_acreditativo>
+            <nivel_titulo></nivel_titulo>
+        </idioma>
+    </idiomas>
+    <experiencia_laboral>
+        <experiencia>
+            <lugar></lugar>
+            <puesto></puesto>
+            <fecha_inicio></fecha_inicio>
+            <fecha_fin></fecha_fin>
+        </experiencia>
+    </experiencia_laboral>
+    <competencias_socio_profesionales>
+        <competencia>
+            <nombre></nombre>
+            <nivel></nivel>
+        </competencia>
+    </competencias_socio_profesionales>
+    <datos_adicionales>
+        <aficiones></aficiones>
+        <disponibilidad_viajar></disponibilidad_viajar>
+        <vehiculo_propio></vehiculo_propio>
+        <licencias_permisos></licencias_permisos>
+    </datos_adicionales>
 </curriculum>
