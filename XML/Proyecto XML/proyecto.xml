@@ -1,73 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<curriculum >
-    <datos_personales>
-        <nombre></nombre>
-        <apellidos></apellidos>
-        <fecha_nacimiento></fecha_nacimiento>
-        <lugar_nacimiento></lugar_nacimiento>
-        <nacionalidades>
-            <nacionalidad></nacionalidad>
-        </nacionalidades>
-        <identificacion></identificacion>
-        <foto></foto>
-    </datos_personales>
-    <datos_contacto>
-        <tipo_via></tipo_via>
-        <nombre_via></nombre_via>
-        <numero></numero>
-        <portal></portal>
-        <escalera></escalera>
-        <piso></piso>
-        <puerta></puerta>
-        <codigo_postal></codigo_postal>
-        <pais></pais>
-        <email></email>
-        <telefono_movil></telefono_movil>
-        <telefono_fijo></telefono_fijo>
-    </datos_contacto>
-    <datos_contacto_adicionales>
-        <pagina_web></pagina_web>
-        <redes_sociales>
-            <red_social></red_social>
-        </redes_sociales>
-    </datos_contacto_adicionales>
-    <formacion_academica>
-        <estudio>
-            <nombre></nombre>
-            <lugar></lugar>
-            <fecha_inicio></fecha_inicio>
-            <fecha_fin></fecha_fin>
-        </estudio>
-    </formacion_academica>
+<curriculum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="esquema.xsd">
+    <datosPersonales>
+        <nombre>Juan</nombre>
+        <apellidos>Pérez</apellidos>
+        <fechaNacimiento>1990-01-01</fechaNacimiento>
+        <lugarNacimiento>Madrid</lugarNacimiento>
+        <nacionalidades>Español</nacionalidades>
+        <identificacion>
+            <nif>12345678A</nif>
+        </identificacion>
+        <foto>perfil.jpg</foto>
+    </datosPersonales>
+    <datosContacto>
+        <tipoVia>Calle</tipoVia>
+        <nombreVia>Principal</nombreVia>
+        <numero>123</numero>
+        <portal>A</portal>
+        <escalera>1</escalera>
+        <piso>2</piso>
+        <puerta>3</puerta>
+        <codigoPostal>12345</codigoPostal>
+        <pais>España</pais>
+        <email>juanperez@mail.com</email>
+        <telefonoMovil>123456789</telefonoMovil>
+        <telefonoFijo>987654321</telefonoFijo>
+    </datosContacto>
+    <datosContactoAdicionales>
+        <sitioWeb>www.juanperez.com</sitioWeb>
+        <redesSociales>
+            <nombre>LinkedIn</nombre>
+            <url>www.linkedin.com/juanperez</url>
+        </redesSociales>
+    </datosContactoAdicionales>
+    <formacionAcademica>
+        <estudios>
+            <nombre>Ingeniería Informática</nombre>
+            <lugar>Universidad XYZ</lugar>
+            <fechaInicio>2010-09-01</fechaInicio>
+            <fechaFin>2014-06-30</fechaFin>
+        </estudios>
+    </formacionAcademica>
     <idiomas>
         <idioma>
-            <nombre></nombre>
-            <expresion_oral></expresion_oral>
-            <comprension_oral></comprension_oral>
-            <expresion_escrita></expresion_escrita>
-            <comprension_escrita></comprension_escrita>
-            <titulo_acreditativo></titulo_acreditativo>
-            <nivel_titulo></nivel_titulo>
+            <nombre>Inglés</nombre>
+            <nivelExpresionOral>bajo</nivelExpresionOral>
+            <nivelComprensionOral>alto</nivelComprensionOral>
+            <nivelExpresionEscrita>medio</nivelExpresionEscrita>
+            <nivelComprensionEscrita>alto</nivelComprensionEscrita>
+            <tituloAcreditativo>CAMBRIEDGE</tituloAcreditativo>
+            <nivelTitulo>B2</nivelTitulo>
         </idioma>
     </idiomas>
-    <experiencia_laboral>
+    <experienciaLaboral>
         <experiencia>
-            <lugar></lugar>
-            <puesto></puesto>
-            <fecha_inicio></fecha_inicio>
-            <fecha_fin></fecha_fin>
+            <lugar>Empresa ABC</lugar>
+            <puesto>Ingeniero de Software</puesto>
+            <fechaInicio>2014-07-01</fechaInicio>
+            <fechaFin>2020-12-31</fechaFin>
         </experiencia>
-    </experiencia_laboral>
-    <competencias_socio_profesionales>
+    </experienciaLaboral>
+    <competencias>
         <competencia>
-            <nombre></nombre>
-            <nivel></nivel>
+            <nombre>Java</nombre>
+            <nivel>5</nivel>
         </competencia>
-    </competencias_socio_profesionales>
-    <datos_adicionales>
-        <aficiones></aficiones>
-        <disponibilidad_viajar></disponibilidad_viajar>
-        <vehiculo_propio></vehiculo_propio>
-        <licencias_permisos></licencias_permisos>
-    </datos_adicionales>
+    </competencias>
+    <datosAdicionales>
+        <aficiones>Lectura, Viajar</aficiones>
+        <disponibilidadViajar>true</disponibilidadViajar>
+        <vehiculoPropio>true</vehiculoPropio>
+        <licencias_conduccion>B</licencias_conduccion>
+        <licencias_conduccion>A2</licencias_conduccion>
+    </datosAdicionales>
 </curriculum>

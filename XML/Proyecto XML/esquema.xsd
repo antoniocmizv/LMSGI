@@ -3,6 +3,7 @@
   <xs:element name="curriculum">
     <xs:complexType>
       <xs:sequence>
+        <!-- Definir los elementos dentro de la  raíz -->
         <xs:element name="datosPersonales" type="Datos_Personales" />
         <xs:element name="datosContacto" type="Datos_Contacto" />
         <xs:element name="datosContactoAdicionales" type="Datos_Adicionales_Contacto" minOccurs="0" />
@@ -14,8 +15,11 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+
+  <!-- Definir los datos complejos de  Datos_Personales -->
   <xs:complexType name="Datos_Personales">
     <xs:sequence>
+      <!-- Definir los elementos de Datos_Personales -->
       <xs:element name="nombre" type="xs:string" />
       <xs:element name="apellidos" type="xs:string" />
       <xs:element name="fechaNacimiento" type="xs:date" />
@@ -25,5 +29,218 @@
       <xs:element name="foto" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+
+  <!-- Definir los datos complejos de Identificacion -->
+  <xs:complexType name="Identificacion">
+    <xs:choice>
+      <!-- Definir los elementos de Identificacion -->
+      <xs:element name="nif">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\d{8}[A-Z]" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nie">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="[XYZ]\d{7}[A-Z]" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+
+  <!-- Definir los datos complejos de Datos_Contacto -->
+  <xs:complexType name="Datos_Contacto">
+    <xs:sequence>
+      <!-- Definir los elementos de Datos_Contacto -->
+      <xs:element name="tipoVia" type="xs:string" minOccurs="0" />
+      <xs:element name="nombreVia" type="xs:string" minOccurs="0" />
+      <xs:element name="numero" type="xs:string" minOccurs="0" />
+      <xs:element name="portal" type="xs:string" minOccurs="0" />
+      <xs:element name="escalera" type="xs:string" minOccurs="0" />
+      <xs:element name="piso" type="xs:string" minOccurs="0" />
+      <xs:element name="puerta" type="xs:string" minOccurs="0" />
+      <xs:element name="codigoPostal" type="CodigoPostal" />
+      <xs:element name="pais" type="xs:string" />
+      <xs:element name="email" type="Email" />
+      <xs:element name="telefonoMovil" type="TelefonoMovil" />
+      <xs:element name="telefonoFijo" type="TelefonoFijo" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definir los datos complejos de  Datos_Adicionales_Contacto -->
+  <xs:complexType name="Datos_Adicionales_Contacto">
+    <xs:sequence>
+      <!-- Definir los elementos de  Datos_Adicionales_Contacto -->
+      <xs:element name="sitioWeb" type="xs:string" minOccurs="0" />
+      <xs:element name="redesSociales" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="url" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definir los datos complejos de  Datos_Academicos -->
+  <xs:complexType name="Datos_Academicos">
+    <xs:sequence>
+      <!-- Definir los elementos de  Datos_Academicos -->
+      <xs:element name="estudios" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="lugar" type="xs:string" />
+            <xs:element name="fechaInicio" type="xs:date" />
+            <xs:element name="fechaFin" type="xs:date" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definir los datos complejos de Datos_Idiomas -->
+  <xs:complexType name="Datos_Idiomas">
+    <xs:sequence>
+      <!-- Definir los elementos de Datos_Idiomas -->
+      <xs:element name="idioma" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="nivelExpresionOral" type="NivelIdioma" minOccurs="0" />
+            <xs:element name="nivelComprensionOral" type="NivelIdioma" minOccurs="0" />
+            <xs:element name="nivelExpresionEscrita" type="NivelIdioma" minOccurs="0" />
+            <xs:element name="nivelComprensionEscrita" type="NivelIdioma" minOccurs="0" />
+            <xs:element name="tituloAcreditativo" type="xs:string" minOccurs="0" />
+            <xs:element name="nivelTitulo" type="TituloIdioma" minOccurs="0" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  
+   <!-- Definir los tipos simples para NivelIdioma -->
+   <xs:simpleType name="NivelIdioma">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="bajo" />
+      <xs:enumeration value="medio" />
+      <xs:enumeration value="alto" />
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Definir los datos complejos de Experiencia_Trabajo -->
+  <xs:complexType name="Experiencia_Trabajo">
+    <xs:sequence>
+      <!-- Definir los elementos de Experiencia_Trabajo -->
+      <xs:element name="experiencia" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="lugar" type="xs:string" />
+            <xs:element name="puesto" type="xs:string" />
+            <xs:element name="fechaInicio" type="xs:date" />
+            <xs:element name="fechaFin" type="xs:date" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definir los datos complejos de Datos_Habilidades -->
+  <xs:complexType name="Datos_Habilidades">
+    <xs:sequence>
+      <!-- Definir los elementos de Datos_Habilidades -->
+      <xs:element name="competencia" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="nivel" type="NivelCompetencia" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definirlos datos complejos de Informacion_Adicional -->
+  <xs:complexType name="Informacion_Adicional">
+    <xs:sequence>
+      <!-- Definir los elementos de Informacion_Adicional -->
+      <xs:element name="aficiones" type="xs:string" minOccurs="0" />
+      <xs:element name="disponibilidadViajar" type="xs:boolean" />
+      <xs:element name="vehiculoPropio" type="xs:boolean" />
+      <xs:element name="licencias_conduccion" type="LicenciaConduccion" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Definir los tipos simples para CodigoPostal -->
+  <xs:simpleType name="CodigoPostal">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{5}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definir los tipos simples para Email -->
+  <xs:simpleType name="Email">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[^@]+@[^\.]+\..+" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definir los tipos simples para TelefonoMovil -->
+  <xs:simpleType name="TelefonoMovil">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{9}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definir los tipos simples para TelefonoFijo -->
+  <xs:simpleType name="TelefonoFijo">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{9}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+ 
+  <!-- Definir los tipos simples para TituloIdioma -->
+  <xs:simpleType name="TituloIdioma">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A1" />
+      <xs:enumeration value="A2" />
+      <xs:enumeration value="B1" />
+      <xs:enumeration value="B2" />
+      <xs:enumeration value="C1" />
+      <xs:enumeration value="C2" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definir los tipos simples para NivelCompetencia -->
+  <xs:simpleType name="NivelCompetencia">
+    <xs:restriction base="xs:int">
+      <xs:minInclusive value="1" />
+      <xs:maxInclusive value="5" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definir los tipos simples para LicenciaConduccion -->
+  <xs:simpleType name="LicenciaConduccion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AM" />
+      <xs:enumeration value="A1" />
+      <xs:enumeration value="A2" />
+      <xs:enumeration value="A" />
+      <xs:enumeration value="B" />
+      <xs:enumeration value="B+E" />
+      <xs:enumeration value="C1" />
+      <xs:enumeration value="C" />
+      <xs:enumeration value="D1" />
+      <xs:enumeration value="D1+E" />
+      <xs:enumeration value="D" />
+      <xs:enumeration value="BTP" />
+    </xs:restriction>
+  </xs:simpleType>
 
 </xs:schema>
